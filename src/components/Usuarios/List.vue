@@ -17,7 +17,7 @@
           <td>Eclair</td>
           <td>$0.87</td>
           <td>
-            <a @click="goTo(1)">Visualizar</a>
+            <a @click.prevent="goTo(1)">Visualizar</a>
           </td>
         </tr>
         <tr>
@@ -25,7 +25,7 @@
           <td>Jellybean</td>
           <td>$3.76</td>
           <td>
-            <a @click="goTo(1)">Visualizar</a>
+            <a @click.prevent="goTo(1)">Visualizar</a>
           </td>
         </tr>
         <tr>
@@ -33,7 +33,7 @@
           <td>Lollipop</td>
           <td>$7.00</td>
           <td>
-            <a @click="goTo(1)">Visualizar</a>
+            <a @click.prevent="goTo(1)">Visualizar</a>
           </td>
         </tr>
       </tbody>
