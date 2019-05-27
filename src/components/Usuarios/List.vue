@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3>Usuarios List</h3>
+    UsuariosList: {{ usuarios }}
     <table class="striped">
       <thead>
         <tr>
@@ -48,6 +49,14 @@ export default {
     goTo: function (id) {
       this.$router.push('/usuarios/' + id)
     }
+  },
+  computed: {
+    usuarios () {
+      return this.$store.state.usuario.usuariosList
+    }
+  },
+  created () {
+    this.$store.dispatch('getUsuarios')
   }
 }
 </script>

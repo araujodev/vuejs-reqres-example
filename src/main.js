@@ -13,9 +13,7 @@ import VuexStore from './vuex/store'
 Vue.use(Vuex)
 Vue.use(VueResource)
 Vue.use(VueRouter)
-
 Vue.http.options.root = process.env.SERVER
-Vue.config.productionTip = false
 
 const store = new Vuex.Store(VuexStore)
 const router = new VueRouter({
@@ -27,6 +25,7 @@ sync(store, router)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

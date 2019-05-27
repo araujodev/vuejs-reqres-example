@@ -1,3 +1,7 @@
+import usuario from './modules/usuario'
+
 export default {
-  modules: {}
+  modules: {
+    usuario: usuario
+  }
 }

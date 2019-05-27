@@ -1,8 +1,8 @@
-"use strict";
-const merge = require("webpack-merge");
-const prodEnv = require("./prod.env");
+"use strict"
+const merge = require("webpack-merge")
+const prodEnv = require("./prod.env")
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  SERVER: '"http://localhost:8080/"'
-});
+  SERVER: '"https://reqres.in"'
+})

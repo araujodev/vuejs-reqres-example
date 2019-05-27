@@ -24,7 +24,7 @@
         <td>Janet</td>
         <td>Weaver</td>
         <td>
-          <a href="#/contas/1/editar">Editar</a>
+          <a href="#/usuarios/1/editar">Editar</a>
           <br>
           <a @click.prevent="remove(1)">Remover</a>
         </td>
