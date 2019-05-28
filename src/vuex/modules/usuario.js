@@ -23,6 +23,15 @@ export default {
       Vue.http.get('api/users/' + id).then(response => {
         context.commit('updateUsuarioDetail', response.data.data)
       })
+    },
+    newUsuario (context, data) {
+      Vue.http.post('api/users', data)
+    },
+    updateUsuario (context, params) {
+      Vue.http.put('api/users/' + params.id, params.data)
+    },
+    removeUsuario (context, id) {
+      Vue.http.delete('api/users/' + id)
     }
   }
 }

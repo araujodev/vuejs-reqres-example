@@ -12,7 +12,7 @@
       </thead>
 
       <tbody>
-        <tr v-for="usuario in usuarios">
+        <tr v-for="usuario in usuarios" :key="usuario.id">
           <td>{{ usuario.first_name }}</td>
           <td>{{ usuario.last_name }}</td>
           <td>{{ usuario.email }}</td>

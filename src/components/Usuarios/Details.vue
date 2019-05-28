@@ -35,7 +35,9 @@ export default {
   name: 'usuarios-detail',
   methods: {
     remove: function (id) {
-      this.$router.push('/usuarios')
+      this.$store.dispatch('removeUsuario', id).then(() => {
+        this.$router.push('/usuarios')
+      })
     }
   },
   computed: {
