@@ -9,7 +9,7 @@ const routes = [
   { path: '/usuarios', component: UsuariosList },
   { path: '/usuarios/novo', component: UsuariosNovo },
   { path: '/usuarios/:id', component: UsuariosDetail },
-  { path: '/usuarios/:id/editar', component: UsuariosEditar }
+  { path: '/usuarios/:id/editar', name: 'usuario.edit', component: UsuariosEditar }
 ]
 
 export default routes

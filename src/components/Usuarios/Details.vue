@@ -21,7 +21,7 @@
         <td>{{ usuario.first_name }}</td>
         <td>{{ usuario.last_name }}</td>
         <td>
-          <a v-bind:href="'#usuarios/' + usuario.id + '/editar'">Editar</a>
+          <router-link :to="{ name: 'usuario.edit', params: { id: usuario.id }}">Editar</router-link>
           <br>
           <a @click.prevent="remove(usuario.id)">Remover</a>
         </td>
