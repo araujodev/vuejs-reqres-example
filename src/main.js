@@ -13,7 +13,15 @@ import VuexStore from './vuex/store'
 Vue.use(Vuex)
 Vue.use(VueResource)
 Vue.use(VueRouter)
+
 Vue.http.options.root = process.env.SERVER
+Vue.http.interceptors.push((request, next) => {
+  request.headers.set(
+    'Authorization',
+    'Bearer xfekoko3kofok32kodkokoxkoo3kof2okrok32kofk3oko3jgi2jij3'
+  )
+  next()
+})
 
 const store = new Vuex.Store(VuexStore)
 const router = new VueRouter({

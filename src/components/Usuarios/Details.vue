@@ -14,19 +14,16 @@
     <tbody>
       <tr>
         <td>
-          <img
-            src="https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
-            alt="Avatar"
-          >
+          <img v-bind:src="usuario.avatar" alt>
         </td>
-        <td>2</td>
-        <td>janet.weaver@reqres.in</td>
-        <td>Janet</td>
-        <td>Weaver</td>
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>{{ usuario.first_name }}</td>
+        <td>{{ usuario.last_name }}</td>
         <td>
-          <a href="#/usuarios/1/editar">Editar</a>
+          <a v-bind:href="'#usuarios/' + usuario.id + '/editar'">Editar</a>
           <br>
-          <a @click.prevent="remove(1)">Remover</a>
+          <a @click.prevent="remove(usuario.id)">Remover</a>
         </td>
       </tr>
     </tbody>
@@ -40,6 +37,14 @@ export default {
     remove: function (id) {
       this.$router.push('/usuarios')
     }
+  },
+  computed: {
+    usuario () {
+      return this.$store.state.usuario.usuarioDetail
+    }
+  },
+  created () {
+    this.$store.dispatch('getUsuario', this.$route.params.id)
   }
 }
 </script>
